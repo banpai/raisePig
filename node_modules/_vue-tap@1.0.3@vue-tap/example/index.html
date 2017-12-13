@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>vue-tap demo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
+    #foo {
+        width: 300px;
+        height: 300px;
+        background-color: #f00;
+    }
+    </style>
+</head>
+<body>
+    <div id="foo" v-tap="handler(1, $event)"><div><label>time:</label><span>{{ time }}</span></div></div>
+    <script type="text/javascript" src="example.build.js"></script>
+</body>
+</html>

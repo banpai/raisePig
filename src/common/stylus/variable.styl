@@ -1,0 +1,58 @@
+// 颜色定义规范
+$color-background = #222
+$color-background-d = rgba(0, 0, 0, 0.3)
+$color-highlight-background = #333
+$color-dialog-background = #666
+$color-theme = #ffcd32
+$color-theme-d = rgba(255, 205, 49, 0.5)
+$color-sub-theme = #d93f30
+$color-text = #fff
+// 灰色不重要的文字
+$color-text-d = #99999a
+// 主要的文字颜色
+$color-text-mian = #535353
+
+$color-text-ll = rgba(255, 255, 255, 0.8)
+// 主要的背景色
+$color-main = #008ce6
+// 次要背景色
+$color-second = #00a5d6
+// 再次要按钮色
+$color-btn = #00bdc9
+
+//默认灰色
+$color-bg = #535353
+
+// 红色区域颜色
+$color-red = #fe0101
+
+// 底部变换颜色
+$color-bottom-cg = #37bdc2;
+
+// 灰线
+$border-color = #cccccc
+
+//字体定义规范
+$font-size-24 = cgrem(24)
+$font-size-20 = cgrem(20)
+$font-size-18 = cgrem(18)
+$font-size-16 = cgrem(16)
+$font-size-15 = cgrem(15)
+$font-size-14 = cgrem(14)
+$font-size-13 = cgrem(13)
+$font-size-12 = cgrem(12)
+
+$font-size-12rem = 2.4rem
+
+// 距离顶部高度(nav是fixed的)
+$margintop-nav = cgrem(44)
+
+// 动态计算rem
+// 之前用过不能删除
+cgrem(x)
+  (x/12.5)rem
+
+_c(x)
+  (x/25)rem
+
+@import "./view.styl"

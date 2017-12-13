@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "iconfont";
+    src: url(../fonts/iconfont.ttf) format('truetype');
+}
+
+.icon-check-box-empty:before {
+    font-family: "iconfont" !important;
+    content: "\e60f" !important;
+    font-size: 20px !important;
+    color: #37bdc2 !important;
+}
+
+.icon-check-box-empty:checked:before {
+    font-family: "iconfont" !important;
+    content: "\e610" !important;
+    font-size: 20px !important;
+    color: #37bdc2 !important;
+}

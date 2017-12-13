@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta charset="utf-8"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>vue-mui</title>
+    <link rel="stylesheet" href="static/css/weui.min.css">
+    <link href="static/css/mui.min.css" rel="stylesheet" />
+</head>
+
+<body style="background: #fff">
+    <div id="app"></div>
+    <script src="static/js/common.js"></script>
+    <script src="static/js/mui.js"></script>
+    <script src="static/js/mui.picker.js"></script>
+    <script src="static/js/mui.poppicker.js"></script>
+    <script>
+        window.backall = function() {
+                document.addEventListener('touchstart', function(event) {
+                    var touch = event.targetTouches[0];
+                    // 开始坐标
+                    this.startx = touch.pageX;
+                    this.starty = touch.pageY;
+                })
+                document.addEventListener('touchmove', function(event) {
+                    var touch = event.targetTouches[0];
+                    // 结束坐标
+                    this.endx = touch.pageX;
+                    this.endy = touch.pageY;
+                })
+                document.addEventListener('touchend', function(event) {
+                    if ((this.endx - this.startx) >= 100) {
+                        // 执行右滑回调
+                        mui.back();
+                    }
+                    this.endx = 0;
+                    this.startx = 0;
+                })
+            }
+            // mui加载
+            // mui初始化
+        mui.init();
+        mui.plusReady(function() {
+            // 在这里调用plus api
+            plus.webview.currentWebview().setStyle({
+                scrollIndicator: 'none'
+            });
+
+        });
+    </script>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
